@@ -1,8 +1,10 @@
-import PortfolioComponent from '../components/portfolio';
-export default function Home() {
+import { ThemeProvider } from 'next-themes'
+import Portfolio from '../components/portfolio'
+
+export default function PortfolioComponent() {
   return (
-    <>
-    <PortfolioComponent />
-    </>
-  );
+    <ThemeProvider attribute="class" defaultTheme="light">
+      <Portfolio />
+    </ThemeProvider>
+  )
 }

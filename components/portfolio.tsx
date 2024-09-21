@@ -44,18 +44,20 @@ function ProfileCard() {
           <p className="text-xs font-normal dark:text-gray-600 text-gray-400">
             I&apos;m developer and tech enthusiast from India. I love to build things🏗️ and share my knowledge with others.
           </p>
-          <p className="text-xs font-normal dark:text-gray-600 text-gray-400">Looking to hire me? Email me @ theshubhamkumr@gmail.com</p>
+            <p className="text-xs font-normal dark:text-gray-600 text-gray-400">
+            Looking to hire me? Email me at <a href="mailto:theshubhamkumr@gmail.com" className="underline">theshubhamkumr@gmail.com</a>
+            </p>
         </div>
       </div>
       <div className="flex gap-4">
         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/theshubhamkumr/" aria-label="Shubham Kumar's LinkedIn">
-          <Linkedin className="w-5 h-5 dark:text-gray-600 text-gray-400" />
+          <Linkedin className="w-5 h-5 dark:text-gray-600 text-gray-400 hover:text-blue-500" />
         </a>
         <a target="_blank" rel="noopener noreferrer" href="https://x.com/_whyshubham" aria-label="Shubham Kumar's Twitter page">
-          <Twitter className="w-5 h-5 dark:text-gray-600 text-gray-400" />
+          <Twitter className="w-5 h-5 dark:text-gray-600 text-gray-400 hover:text-sky-500" />
         </a>
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/shubham-kumr" aria-label="Shubham Kumar's Github profile">
-          <Github className="w-5 h-5 dark:text-gray-600 text-gray-400" />
+          <Github className="w-5 h-5 dark:text-gray-600 text-gray-400 hover:text-green-700" />
         </a>
       </div>
     </div>
@@ -65,7 +67,7 @@ function ProfileCard() {
 function CurrentlyWorking() {
   return (
     <div className="flex flex-col mt-[2rem] w-full">
-      <h1 className="font-normal dark:text-gray-800 dark:text-gray-200">currently cooking 👨‍🍳</h1>
+      <h1 className="font-normal dark:text-gray-800 text-gray-200">currently cooking 👨‍🍳</h1>
       <div className="h-[1px] mt-2 w-full dark:bg-gray-300 bg-zinc-800" />
       <div className="flex flex-col justify-center items-start w-full mt-[0.75rem] gap-2">
         <div className="flex flex-col w-full">
@@ -119,12 +121,12 @@ function ProjectCard({ title, description, image, href }: ProjectCardProps) {
           className="absolute inset-0 z-0 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 pointer-events-none"
           style={{
             background: theme === 'dark'
-              ? `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.1), transparent 40%)`
-              : `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(0,0,1,0.2), transparent 40%)`,
+            ? `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(0,0,1,0.2), transparent 40%)`
+              : `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.2), transparent 40%)`,
           }}
         />
         <div className="relative z-10 p-3">
-          <div className="relative w-full aspect-[16/9] rounded overflow-hidden">
+          <div className="relative w-full aspect-[13/8] rounded overflow-hidden">
             <Image src={image} alt={`${title} thumbnail`} layout="fill" objectFit="cover" objectPosition="center" />
           </div>
           <div className="flex flex-col gap-1 mt-2">
@@ -142,7 +144,7 @@ function Projects() {
     {
       title: "supercharged to-do app",
       description: "stay organized and manage your tasks effectively with our feature-rich to-do app.",
-      image: "https://utfs.io/f/qrNhX5uLNRYDKkhA73HI1EhYeo6tXVmPBLNlQS7J9TvkAMaU",
+      image: "https://utfs.io/f/qrNhX5uLNRYDgNOfX95FiJ73qDY9kybxocvC1p6ZdmHztB25",
       href: "https://havetodoapp.netlify.app"
     },
     {
