@@ -17,7 +17,7 @@ function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="fixed top-4 right-4 p-2 rounded-full dark:bg-gray-200 bg-gray-800 dark:text-gray-800 text-gray-200"
+      className="fixed top-4 right-4 p-2 rounded-full dark:bg-gray-200 bg-zinc-800 dark:text-zinc-800 text-gray-200"
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? <Moon size={20} /> : <Sun size={20} />}
