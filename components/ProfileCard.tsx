@@ -1,32 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FiGithub, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
 
 function ProfileCard() {
   const [buttonText, setButtonText] = useState('Resume');
-  const [showPopup, setShowPopup] = useState(true);
-  const [fadeOut, setFadeOut] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setFadeOut(true);
-      const fadeTimer = setTimeout(() => {
-        setShowPopup(false);
-      }, 500); 
-      return () => clearTimeout(fadeTimer);
-    }, 1000); 
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className="flex flex-col space-y-3 p-4 max-w-full">
-      {showPopup && (
-        <div
-          className={`bg-blue-500 text-white text-center p-2 rounded mb-4 transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}
-        >
-          For a better experience, please view on desktop.
-        </div>
-      )}
       <span
         className="inline-block text-4xl font-bold tracking-tight sm:text-4xl md:text-5xl xl:text-6xl text-gray-300 dark:text-zinc-800"
         style={{ opacity: 1, filter: 'blur(0px)', transform: 'translateY(-8px) translateZ(0px)' }}

@@ -2,7 +2,7 @@ function Contact() {
     return (
       <div className="space-y-3 mt-10 text-center">
         <div className="inline-block rounded-full font-medium dark:bg-gray-800 dark:text-white px-3 py-1 text-base bg-gray-100 text-black">
-          Contact
+          <a href="mailto:theshubhamkumr@gmail.com">Contact</a>
         </div>
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white dark:text-black">
           Get in Touch
