@@ -1,3 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.marquees-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    overflow: hidden; /* Hide overflow */
+    position: relative;
+  }
+  
+  .marquee {
+    display: flex;
+    justify-content: start;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .marquee__content {
+    display: flex;
+    gap: 2rem;
+    animation: marquee-left 15s linear infinite; /* Default animation (left-to-right) */
+    will-change: transform; /* Optimize animation */
+  }
+  
+  .marquee-2 .marquee__content {
+    animation: marquee-right 15s linear infinite; /* Right-to-left animation */
+  }
+  
+  /* Continuous animation from left to right */
+  @keyframes marquee-left {
+    0% {
+      transform: translateX(0); /* Start from the left */
+    }
+    100% {
+      transform: translateX(-100%); /* Move left infinitely */
+    }
+  }
+  
+  /* Continuous animation from right to left */
+  @keyframes marquee-right {
+    0% {
+      transform: translateX(-100%); /* Start from the left */
+    }
+    100% {
+      transform: translateX(0); /* Move right infinitely */
+    }
+  }
+  
+  .marquee li {
+    list-style: none;
+    white-space: nowrap;
+  }
+  
+  .marquee li:not(:last-child)::after {
+    content: "·";
+    margin-left: 1rem;
+    color: gray;
+  }
+  
+  .holographic-text {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1, #84fab0, #8fd3f4);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: holo-shine 3s ease infinite;
+  }
+  
+  .dark .holographic-text-dark {
+    background: linear-gradient(45deg, #ff9a9e, #fda085, #fbc2eb, #ff9a9e, #a6c1ee, #84fab0, #a1c4fd);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: holo-shine 3s ease infinite;
+  }
+  
+  @keyframes holo-shine {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+   
+  }
+  
+  .icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .icon-button:hover {
+    transform: scale(0.9); /* Zoom out effect */
+    color: white; /* Optional to make icon white on hover */
+  }
+  
