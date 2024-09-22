@@ -79,7 +79,7 @@ function ProfileCard() {
           download
           className="flex-grow min-w-[100px] text-sm px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 items-center justify-center transition-all duration-300 text-center"
           onMouseEnter={() => setButtonText('Hire Me?')}
-          onMouseLeave={() => setButtonText('My Resume')}
+          onMouseLeave={() => setButtonText('Resume')}
         >
           {buttonText}
         </a>
