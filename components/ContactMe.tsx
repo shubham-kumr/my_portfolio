@@ -2,7 +2,7 @@ function Contact() {
     return (
       <div className="space-y-3 mt-10 text-center">
         <div className="inline-block rounded-full font-medium dark:bg-gray-800 dark:text-white px-3 py-1 text-base bg-gray-100 text-black">
-          <a href="mailto:theshubhamkumr@gmail.com">Contact</a>
+          <a href="mailto:contactme.shubhamkumar@gmail.com">Contact Me</a>
         </div>
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white dark:text-black">
           Get in Touch
@@ -17,7 +17,7 @@ function Contact() {
           >
             with a direct question on Twitter
           </a>
-          , and I&apos;ll respond whenever I can. I will ignore all soliciting.
+          , and I&apos;ll respond whenever I can.
         </p>
       </div>
     );

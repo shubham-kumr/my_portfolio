@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { FiGithub, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
+import { FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi';
+import { FaXTwitter } from "react-icons/fa6";
 
 function ProfileCard() {
   const [buttonText, setButtonText] = useState('Resume');
@@ -18,7 +19,7 @@ function ProfileCard() {
         style={{ opacity: 1, filter: 'blur(0px)', transform: 'translateY(-8px) translateZ(0px)' }}
       >
         developer from india. i love building things and helping people. you can find me on the internet.<br />
-        reach me: <a href="mailto:theshubhamkumr@gmail.com" className="text-blue-500 hover:underline">theshubhamkumr@gmail.com</a>
+        reach me @ <a href="mailto:contactme.shubhamkumar@gmail.com" className="text-gray-500 hover:text-purple-300">contactme.shubhamkumar@gmail.com</a>
       </span>
       <div className="flex items-center justify-between pt-4 space-x-3">
         <a
@@ -35,7 +36,7 @@ function ProfileCard() {
           rel="noopener noreferrer"
           className="icon-button text-gray-400 hover:bg-blue-500 dark:hover:bg-blue-400"
         >
-          <FiTwitter size={24} />
+          <FaXTwitter size={24} />
         </a>
         <a
           href="https://instagram.com/_shubhamkumar_"
@@ -54,7 +55,7 @@ function ProfileCard() {
           <FiLinkedin size={24} />
         </a>
         <a
-          href="https://utfs.io/f/qrNhX5uLNRYDg3uOeF5FiJ73qDY9kybxocvC1p6ZdmHztB25"
+          href="https://utfs.io/f/qrNhX5uLNRYD5lyYJgzUWgahfdreyB2KLPiqAoMHxC8Yulvk"
           download
           className="flex-grow min-w-[100px] text-sm px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 items-center justify-center transition-all duration-300 text-center"
           onMouseEnter={() => setButtonText('Hire Me?')}

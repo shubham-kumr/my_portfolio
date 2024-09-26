@@ -7,7 +7,7 @@ import SkillsMarquee from './SkillsMarquee'
 import ProfileCard from './ProfileCard'
 import CurrentlyWorking from './CurrentlyWorking'
 import Projects from './ProjectCard'
-import Contact from './Contact'
+import Contact from './ContactMe'
 // import CustomCursor from './CustomCursor'
 import Firework from './Firework'
 

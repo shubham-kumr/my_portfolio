@@ -1,45 +1,47 @@
-import { useState, useRef } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useTheme } from 'next-themes';
+"use client"
+
+import { useState, useRef } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useTheme } from 'next-themes'
 
 interface ProjectCardProps {
-  title: string;
-  description: string;
-  image: string;
-  href: string;
+  title: string
+  description: string
+  image: string
+  href: string
 }
 
 function ProjectCard({ title, description, image, href }: ProjectCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [showPopup, setShowPopup] = useState(false);
-  const { theme } = useTheme();
+  const cardRef = useRef<HTMLDivElement>(null)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [showPopup, setShowPopup] = useState(false)
+  const { theme } = useTheme()
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (cardRef.current) {
-      const rect = cardRef.current.getBoundingClientRect();
+      const rect = cardRef.current.getBoundingClientRect()
       setMousePosition({
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
-      });
+      })
     }
-  };
+  }
 
   const handleMouseEnter = () => {
-    setShowPopup(true);
-  };
+    setShowPopup(true)
+  }
 
   const handleMouseLeave = () => {
-    setShowPopup(false);
-    setMousePosition({ x: 0, y: 0 });
-  };
+    setShowPopup(false)
+    setMousePosition({ x: 0, y: 0 })
+  }
 
   return (
     <Link href={href} target="_blank" rel="noopener noreferrer">
       <div
         ref={cardRef}
-        className="relative w-full rounded-2xl border dark:border-gray-300 border-zinc-800 hover:cursor-pointer overflow-hidden dark:bg-white bg-zinc-900 group"
+        className="relative w-full rounded-2xl border dark:border-gray-300 border-zinc-900 hover:cursor-pointer overflow-hidden dark:bg-white bg-zinc-950 group transition-transform duration-300 ease-in-out hover:scale-105"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -80,7 +82,7 @@ function ProjectCard({ title, description, image, href }: ProjectCardProps) {
         )}
       </div>
     </Link>
-  );
+  )
 }
 
 function Projects() {
@@ -115,7 +117,7 @@ function Projects() {
       image: "https://utfs.io/f/qrNhX5uLNRYDgOAgjq5FiJ73qDY9kybxocvC1p6ZdmHztB25",
       href: "https://currencypricechecker.netlify.app"
     },
-  ];
+  ]
 
   return (
     <div className="max-w-[700px] my-[2rem] w-full">
@@ -129,7 +131,7 @@ function Projects() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
-export default Projects;
+export default Projects
