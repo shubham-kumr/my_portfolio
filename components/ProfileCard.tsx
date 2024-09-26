@@ -6,7 +6,7 @@ function ProfileCard() {
   const [buttonText, setButtonText] = useState('Resume');
 
   return (
-    <div className="flex flex-col space-y-3 max-w-full">
+    <div className="flex flex-col space-y-3 mt-10 max-w-full">
       <span
         className="inline-block text-4xl font-bold tracking-tight sm:text-4xl md:text-5xl xl:text-6xl text-zinc-500 dark:text-neutral-300"
         style={{ opacity: 1, filter: 'blur(0px)', transform: 'translateY(-8px) translateZ(0px)' }}
