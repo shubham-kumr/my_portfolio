@@ -16,6 +16,7 @@ const config: Config = {
 			"color-3": "hsl(var(--color-3))",
 			"color-4": "hsl(var(--color-4))",
 			"color-5": "hsl(var(--color-5))",
+      'scrollbar-gradient': 'linear-gradient(180deg, #ff9a9e, #fad0c4, #a18cd1, #84fab0, #8fd3f4)',
 			background: 'hsl(var(--background))',
 			foreground: 'hsl(var(--foreground))',
 			card: {
@@ -70,7 +71,8 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+
 	},
   },
   plugins: [tailwindcssAnimate],

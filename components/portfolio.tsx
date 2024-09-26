@@ -3,13 +3,12 @@
 import { useState, useEffect } from 'react'
 import { Sun, Moon } from 'lucide-react'
 import { ThemeProvider, useTheme } from 'next-themes'
+import BlurFade from "@/components/magicui/blur-fade"
 import SkillsMarquee from './SkillsMarquee'
 import ProfileCard from './ProfileCard'
 import CurrentlyWorking from './CurrentlyWorking'
 import Projects from './ProjectCard'
 import Contact from './ContactMe'
-// import CustomCursor from './CustomCursor'
-import Firework from './Firework'
 
 function ThemeToggle() {
   const { theme, setTheme } = useTheme()
@@ -22,7 +21,7 @@ function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="fixed top-4 right-4 p-2 rounded-full dark:bg-gray-200 bg-zinc-800 dark:text-zinc-800 text-gray-200"
+      className="fixed top-4 right-4 p-2 rounded-full dark:bg-gray-200 bg-zinc-800 dark:text-zinc-800 text-gray-200 z-50"
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? <Moon size={20} /> : <Sun size={20} />}
@@ -32,18 +31,28 @@ function ThemeToggle() {
 
 function PortfolioContent() {
   return (
-    <div className="min-h-screen dark:bg-gray-100 bg-zinc-950 p-4 transition-colors duration-200">
+    <div className="min-h-screen dark:bg-gray-100 bg-zinc-950 transition-colors duration-200">
       <ThemeToggle />
-      <Firework />
-      {/* <CustomCursor /> */}
-      <main className="flex flex-col items-center justify-between">
-        <div className="flex flex-col items-center justify-center mt-8 mb-16 p-4 w-full max-w-[660px]">
-          <ProfileCard />
-          <CurrentlyWorking />
-          <Projects />
-          <SkillsMarquee />
-          <div className='h-[1px] w-full mt-4 dark:bg-gray-300 bg-zinc-800' />
-          <Contact />
+      <main className="flex flex-col items-center justify-between px-4 py-8 md:py-16">
+        <div className="w-full max-w-[660px] space-y-8 md:space-y-16">
+          <BlurFade delay={0.25} inView>
+            <ProfileCard />
+          </BlurFade>
+          <BlurFade delay={0.35} inView>
+            <CurrentlyWorking />
+          </BlurFade>
+          <BlurFade delay={0.45} inView>
+            <Projects />
+          </BlurFade>
+          <BlurFade delay={0.45} inView>
+            <SkillsMarquee />
+          </BlurFade>
+          <BlurFade delay={0.45} inView>
+            <div className='h-[1px] w-full dark:bg-gray-300 bg-zinc-800' />
+          </BlurFade>
+          <BlurFade delay={0.45} inView>
+            <Contact />
+          </BlurFade>
         </div>
       </main>
     </div>

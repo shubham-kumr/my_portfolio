@@ -6,19 +6,25 @@ function ProfileCard() {
   const [buttonText, setButtonText] = useState('Resume');
 
   return (
-    <div className="flex flex-col space-y-3 p-4 max-w-full">
+    <div className="flex flex-col space-y-3 max-w-full">
       <span
-        className="inline-block text-4xl font-bold tracking-tight sm:text-4xl md:text-5xl xl:text-6xl text-gray-300 dark:text-zinc-800"
+        className="inline-block text-4xl font-bold tracking-tight sm:text-4xl md:text-5xl xl:text-6xl text-zinc-500 dark:text-neutral-300"
         style={{ opacity: 1, filter: 'blur(0px)', transform: 'translateY(-8px) translateZ(0px)' }}
       >
         hi, i&apos;m{' '}
         <span className="holographic-text dark:holographic-text-dark">shubham</span> 👋
       </span>
       <span
-        className="inline-block max-w-full text-base md:text-lg lg:text-xl text-gray-400 dark:text-gray-500"
+        className="inline-block max-w-full text-base md:text-lg lg:text-xl text-gray-400 dark:text-zinc-700"
         style={{ opacity: 1, filter: 'blur(0px)', transform: 'translateY(-8px) translateZ(0px)' }}
       >
         developer from india. i love building things and helping people. you can find me on the internet.<br />
+       
+      </span>
+      <span
+        className="inline-block max-w-full text-sm md:text-base lg:text-lg text-gray-400 dark:text-zinc-800"
+        style={{ opacity: 1, filter: 'blur(0px)', transform: 'translateY(-8px) translateZ(0px)' }}
+      >
         reach me @ <a href="mailto:contactme.shubhamkumar@gmail.com" className="text-gray-500 hover:text-purple-300">contactme.shubhamkumar@gmail.com</a>
       </span>
       <div className="flex items-center justify-between pt-4 space-x-3">
