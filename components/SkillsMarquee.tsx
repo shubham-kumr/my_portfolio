@@ -1,8 +1,8 @@
 function SkillsMarquee() {
   const skills1 = ["TypeScript", "JavaScript", "Python", " "];
-  const skills2 = ["Frontend - React.js / Next.js", "Backend - Node.js", "Database - MongoDB / MySQL"," "];
-  const skills3 = ["YAML", "JSON", "Prisma", "OpenAI", "APIs", "GitHub", " "];
-  const skills4 = ["REST", "Tailwind CSS", "shadcnUI", "Vercel", "Netlify", " "];
+  const skills2 = ["Frontend - React.js / Next.js", "Backend - Node.js", "Database - MongoDB"," "];
+  const skills3 = ["JSON", "OpenAI", "APIs", "GitHub", " "];
+  const skills4 = ["Tailwind CSS", "shadcnUI", "Vercel", "Netlify", " "];
 
   const renderMarquee = (skills: string[]) => (
     <>
